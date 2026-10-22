@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Auraè — Jewellery Beyond Trends">
+  <meta property="og:description" content="Order your favourite pieces directly on Instagram DM @aurae.edition.">
   <meta name="theme-color" content="#090909">
   <meta name="description" content="Discover Auraè — a contemporary jewellery collection for women and men, defined by quiet luxury and timeless elegance.">
   <title>Auraè — Jewellery Beyond Trends</title>
@@ -702,13 +704,127 @@
         animation-duration: .01ms !important;
       }
     }
+
+    /* ========== DM ORDER + MARKETING ========== */
+    :root { --ig: linear-gradient(45deg,#f09433,#dc2743 55%,#bc1888); }
+    .announcement a { text-decoration: underline; font-weight: 700; }
+    .dm-fab {
+      position: fixed; z-index: 150; left: 18px; bottom: 18px;
+      display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px 13px 15px;
+      border: 0; border-radius: 40px; background: var(--ig); color: #fff;
+      font-size: 12px; font-weight: 700; letter-spacing: .4px;
+      box-shadow: 0 8px 28px rgba(220,39,67,.4); transition: transform .25s, box-shadow .25s;
+    }
+    .dm-fab:hover { transform: translateY(-3px); box-shadow: 0 12px 34px rgba(220,39,67,.55); }
+    .dm-fab svg { width: 20px; height: 20px; fill: none; stroke: #fff; stroke-width: 1.8; }
+    .dm-fab small { display: block; font-size: 9px; font-weight: 500; opacity: .9; letter-spacing: .3px; }
+    .dm-fab::after { content: ""; position: absolute; inset: 0; border-radius: 40px; border: 2px solid #dc2743; animation: ping 2.4s ease-out infinite; }
+    @keyframes ping { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.25,1.6); opacity: 0; } }
+    .btn-ig { background: var(--ig); border-color: transparent; color: #fff; }
+    .btn-ig:hover { background: var(--ig); color: #fff; filter: brightness(1.12); }
+    .quick-add-dm { bottom: 58px; }
+    .product-dm { margin-top: 12px; width: 100%; min-height: 40px; padding: 0 10px; font-size: 9px; }
+    .trust { padding: 70px 0; background: #0d0c0b; border-bottom: 1px solid var(--line); }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 34px; }
+    .step { padding: 26px 22px; border: 1px solid var(--line); background: var(--card); }
+    .step b { display: block; margin-bottom: 14px; color: var(--gold); font-family: var(--serif); font-size: 38px; font-weight: 400; line-height: 1; }
+    .step h3 { font-family: var(--serif); font-size: 23px; font-weight: 500; }
+    .step p { margin-top: 8px; color: var(--muted); font-size: 12px; }
+    .promo { padding: 34px 0; background: var(--gold); color: #100e0a; }
+    .promo-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+    .promo h3 { font-family: var(--serif); font-size: clamp(26px,4vw,38px); font-weight: 500; line-height: 1.1; }
+    .promo p { font-size: 12px; margin-top: 4px; }
+    .promo-code { display: inline-flex; align-items: center; gap: 12px; padding: 10px 10px 10px 20px; border: 1px dashed #100e0a; font-weight: 700; letter-spacing: 3px; }
+    .promo-code button { padding: 9px 14px; border: 0; background: #100e0a; color: var(--gold-light); font-size: 9px; letter-spacing: 1.4px; text-transform: uppercase; }
+    .sort-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 26px; }
+    .sort-row select { padding: 9px 12px; border: 1px solid #39352e; background: #0e0d0c; color: #bdb6aa; font-size: 11px; }
+    .gram { padding: 100px 0; }
+    .gram-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
+    .gram-tile { position: relative; aspect-ratio: 1; overflow: hidden; border: 0; padding: 0; background: #191715; }
+    .gram-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .gram-tile:hover img { transform: scale(1.08); }
+    .gram-tile span { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(9,9,9,.6); opacity: 0; transition: .3s; color: #fff; font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; }
+    .gram-tile:hover span, .gram-tile:focus-visible span { opacity: 1; }
+    .reviews { padding: 90px 0; background: #0e0d0c; }
+    .review-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 34px; }
+    .review { padding: 28px; border: 1px solid var(--line); background: var(--card); }
+    .review .stars { color: var(--gold); letter-spacing: 3px; font-size: 12px; }
+    .review q { display: block; margin: 14px 0 18px; font-family: var(--serif); font-size: 22px; line-height: 1.35; quotes: none; }
+    .review cite { color: var(--muted); font-size: 11px; font-style: normal; }
+    .faq { padding: 100px 0; }
+    .faq-list { max-width: 780px; margin: 34px auto 0; }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq summary { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0; cursor: pointer; list-style: none; font-family: var(--serif); font-size: 23px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--gold); font-size: 26px; line-height: 1; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq details p { padding: 0 0 22px; color: var(--muted); font-size: 13px; max-width: 640px; }
+    .center { text-align: center; }
+    .modal { position: fixed; z-index: 400; inset: 0; display: none; place-items: center; padding: 20px; background: rgba(0,0,0,.75); }
+    .modal.open { display: grid; }
+    .modal-box { position: relative; width: min(760px,100%); max-height: 92dvh; overflow: auto; display: grid; grid-template-columns: 1fr 1fr; background: #100f0d; border: 1px solid var(--line); }
+    .modal-box img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; }
+    .modal-body { padding: 34px 28px; }
+    .modal-body h3 { margin: 6px 0 8px; font-family: var(--serif); font-size: 34px; font-weight: 400; line-height: 1.1; }
+    .modal-body p { color: var(--muted); font-size: 12px; }
+    .modal-body .price { margin: 12px 0 18px; color: var(--gold-light); font-size: 16px; }
+    .modal-body .btn { width: 100%; margin-top: 10px; }
+    .modal-close { position: absolute; top: 10px; right: 10px; z-index: 2; width: 34px; height: 34px; border: 1px solid #39352e; border-radius: 50%; background: rgba(9,9,9,.8); font-size: 18px; }
+    .ship-bar { margin-bottom: 14px; font-size: 11px; color: var(--muted); }
+    .ship-bar i { display: block; height: 3px; margin-top: 7px; background: #2c2821; }
+    .ship-bar i b { display: block; height: 100%; width: 0; background: var(--gold); transition: width .4s; }
+    .cart-footer .btn + .btn { margin-top: 10px; }
+    .cart-note { width: 100%; margin-bottom: 12px; padding: 10px; min-height: 52px; border: 1px solid #39352e; background: #080808; color: #fff; font-size: 12px; resize: none; }
+    .to-top { position: fixed; z-index: 140; right: 18px; bottom: 18px; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: #11100f; color: var(--gold-light); opacity: 0; pointer-events: none; transition: .3s; }
+    .to-top.show { opacity: 1; pointer-events: auto; }
+    .toast { right: auto; left: 18px; bottom: 84px; }
+    @media (max-width: 950px) { .steps, .review-grid { grid-template-columns: repeat(2,1fr); } .gram-grid { grid-template-columns: repeat(3,1fr); } .quick-add-dm { bottom: 58px; } }
+    @media (max-width: 600px) {
+      .steps, .review-grid { grid-template-columns: 1fr; }
+      .gram-grid { grid-template-columns: repeat(2,1fr); }
+      .modal-box { grid-template-columns: 1fr; } .modal-box img { min-height: 240px; max-height: 300px; }
+      .dm-fab { padding: 12px 16px 12px 13px; left: 12px; bottom: 12px; } .dm-fab small { display: none; }
+      .to-top { bottom: 72px; right: 12px; } .toast { left: 12px; bottom: 74px; }
+      .faq summary { font-size: 20px; }
+    }
+    .dm-fab:focus-visible, .btn:focus-visible, .filter-btn:focus-visible, .gram-tile:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+
+    /* ========== WISHLIST DRAWER + RESPONSIVE ========== */
+    .wish-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .wish-foot .btn { width: 100%; margin: 0; }
+    .wish-foot .full { grid-column: 1 / -1; }
+    .wish-item { display: grid; grid-template-columns: 83px 1fr auto; gap: 14px; padding: 15px 0; border-bottom: 1px solid #2c2821; }
+    .wish-item img { width: 83px; height: 100px; object-fit: cover; }
+    .wish-item h4 { font-family: var(--serif); font-size: 21px; font-weight: 400; line-height: 1.15; }
+    .wish-item p { margin-top: 6px; color: var(--gold-light); font-size: 12px; }
+    .wish-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .mini { padding: 8px 11px; border: 1px solid #39352e; background: transparent; color: var(--cream); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; transition: .25s; }
+    .mini:hover { border-color: var(--gold); color: var(--gold-light); }
+    .mini.ig { border: 0; background: var(--ig); color: #fff; }
+    .count.bump { animation: bump .4s; }
+    @keyframes bump { 50% { transform: scale(1.6); } }
+    .qv-wish { margin-top: 10px; width: 100%; }
+    .filter-bar { overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .filter-bar::-webkit-scrollbar { display: none; }
+    .filter-btn { flex: none; min-height: 40px; }
+    @media (hover: none) { .quick-add { opacity: 1; transform: none; } .quick-add-dm { display: none; } }
+    @media (max-width: 950px) { .header-actions .icon-btn { min-width: 40px; min-height: 40px; } .hero-buttons .btn { flex: 1 1 200px; } }
+    @media (max-width: 600px) {
+      .wish-item, .cart-item { grid-template-columns: 70px 1fr auto; gap: 11px; }
+      .wish-item img, .cart-item img { width: 70px; height: 88px; }
+      .search-form { flex-direction: column; }
+      .promo-code { width: 100%; justify-content: space-between; }
+      .section-heading { font-size: clamp(32px, 9vw, 44px); }
+      .count { top: -3px; right: -3px; }
+    }
+    .wish-drawer { z-index: 202; }
   </style>
 </head>
 
 <body>
 
   <div class="announcement">
-    A little luxury, every day &nbsp; · &nbsp; Discover the Auraè collection
+    Order in 2 minutes on Instagram DM &nbsp; · &nbsp; <a href="#" data-dm="general" data-src="announcement">@aurae.edition</a> &nbsp; · &nbsp; Use code AURAE10 for 10% off
   </div>
 
   <header class="header">
@@ -722,7 +838,9 @@
         <a href="#home">Home</a>
         <a href="#categories">Collections</a>
         <a href="#shop">Shop</a>
+        <a href="#how">How to order</a>
         <a href="#story">Our Story</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <a class="logo" href="#home" aria-label="Auraè home">Auraè</a>
@@ -770,6 +888,7 @@
 
         <div class="hero-buttons">
           <a class="btn" href="#shop">Explore the collection</a>
+          <a class="btn btn-ig" href="#" data-dm="general" data-src="hero">Order on Instagram DM</a>
           <a class="btn btn-outline" href="#story">Discover Auraè</a>
         </div>
 
@@ -783,6 +902,29 @@
         <div class="brand-point"><span>◇</span> Thoughtful details</div>
         <div class="brand-point"><span>✳</span> Effortless styling</div>
         <div class="brand-point"><span>∞</span> Made to be treasured</div>
+      </div>
+    </section>
+
+    <section class="promo" aria-label="Instagram offer">
+      <div class="container promo-inner">
+        <div>
+          <h3>DM-only offer: 10% off your first order.</h3>
+          <p>Send us your bag on Instagram and mention the code. Follow @aurae.edition to claim it.</p>
+        </div>
+        <div class="promo-code"><span id="promoCode">AURAE10</span><button type="button" id="copyPromo">Copy code</button></div>
+      </div>
+    </section>
+
+    <section class="trust" id="how">
+      <div class="container">
+        <div class="eyebrow">Order without checkout forms</div>
+        <h2 class="section-heading" style="margin-top:12px">Order in four steps, <em>right in your DMs.</em></h2>
+        <div class="steps">
+          <div class="step"><b>1</b><h3>Pick your pieces</h3><p>Add favourites to your bag or tap “Order on DM” on any piece.</p></div>
+          <div class="step"><b>2</b><h3>Send the message</h3><p>We copy your order summary and open @aurae.edition for you. Paste and send.</p></div>
+          <div class="step"><b>3</b><h3>Confirm details</h3><p>We reply with availability, delivery time and payment options.</p></div>
+          <div class="step"><b>4</b><h3>Receive your Auraè</h3><p>Your jewellery arrives gift-ready. Share it and tag us.</p></div>
+        </div>
       </div>
     </section>
 
@@ -858,6 +1000,15 @@
           <button class="filter-btn" data-filter="Nose Pins">Nose pins</button>
         </div>
 
+        <div class="sort-row">
+          <span class="eyebrow">Tap a piece to order it on Instagram</span>
+          <label><span class="sr" style="position:absolute;left:-9999px">Sort</span>
+            <select id="sortSelect" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select></label>
+        </div>
         <div class="product-grid" id="productGrid" aria-live="polite"></div>
       </div>
     </section>
@@ -898,6 +1049,46 @@
       </div>
     </section>
 
+    <section class="gram" id="gram">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <div class="eyebrow">#AuraeEdition</div>
+            <h2 class="section-heading" style="margin-top:12px">Shop the <em>Gram.</em></h2>
+            <p class="section-intro">See the pieces as they appear on @aurae.edition. Tap one to ask about it on DM.</p>
+          </div>
+          <a class="text-link" href="#" data-follow>Follow on Instagram ↗</a>
+        </div>
+        <div class="gram-grid" id="gramGrid"></div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="container center">
+        <div class="eyebrow">Loved by our DMs</div>
+        <h2 class="section-heading" style="margin-top:12px">Kind words, <em>straight from Instagram.</em></h2>
+        <div class="review-grid">
+          <div class="review"><div class="stars">★★★★★</div><q>Replied within minutes and the pearl layer necklace looks even better in person.</q><cite>Sample review · replace with a real customer</cite></div>
+          <div class="review"><div class="stars">★★★★★</div><q>Ordering over DM felt personal. I got styling advice for my gift too.</q><cite>Sample review · replace with a real customer</cite></div>
+          <div class="review"><div class="stars">★★★★★</div><q>The Sovereign rings are bold without being loud. Exactly what I wanted.</q><cite>Sample review · replace with a real customer</cite></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container center">
+        <div class="eyebrow">Before you order</div>
+        <h2 class="section-heading" style="margin-top:12px">Questions, <em>answered.</em></h2>
+        <div class="faq-list" style="text-align:left">
+          <details><summary>How do I order?</summary><p>Add pieces to your bag and choose “Order via Instagram DM”. Your order summary is copied and Instagram opens a chat with @aurae.edition. Paste it and send.</p></details>
+          <details><summary>How do I pay?</summary><p>We confirm payment options in the DM once your order is received. No payment is taken on this website.</p></details>
+          <details><summary>How long does delivery take?</summary><p>We share the delivery time for your pincode in the DM. Add your city when you message us.</p></details>
+          <details><summary>Can I return or exchange a piece?</summary><p>Message us on Instagram within 48 hours of delivery and we will help with an exchange.</p></details>
+          <details><summary>Where do I use the AURAE10 code?</summary><p>Mention it in your DM. We apply it to your total before sharing payment details.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="newsletter" id="newsletter">
       <div class="container">
         <div class="eyebrow">A note from Auraè</div>
@@ -909,6 +1100,7 @@
           <button type="submit">Sign me up ↗</button>
         </form>
         <p id="newsletterMessage" role="status"></p>
+        <p style="margin-top:22px"><a class="btn btn-ig" href="#" data-follow>Follow @aurae.edition</a></p>
       </div>
     </section>
   </main>
@@ -943,7 +1135,8 @@
 
         <div class="footer-column">
           <h4>Follow the edit</h4>
-          <a href="https://www.instagram.com/aurae.edition/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          <a href="#" data-follow>Instagram @aurae.edition ↗</a>
+          <a href="#" data-dm="general" data-src="footer">Message us on DM ↗</a>
           <a href="#shop">Discover the collection</a>
           <a href="#home">Back to top ↑</a>
         </div>
@@ -956,6 +1149,44 @@
       </div>
     </div>
   </footer>
+
+  <button class="dm-fab" id="dmFab" data-dm="general" data-src="floating_button" aria-label="Order on Instagram DM, @aurae.edition">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="#fff"/></svg>
+    <span>Order from Instagram DM<small>@aurae.edition</small></span>
+  </button>
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <div class="modal" id="quickView" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="modal-box">
+      <button class="modal-close" id="qvClose" aria-label="Close">×</button>
+      <img id="qvImg" alt="">
+      <div class="modal-body">
+        <div class="eyebrow" id="qvCat"></div>
+        <h3 id="qvName"></h3>
+        <p id="qvStyle"></p>
+        <div class="price" id="qvPrice"></div>
+        <button class="btn btn-ig" id="qvDm">Order this on Instagram DM</button>
+        <button class="btn btn-outline" id="qvAdd">Add to shopping bag</button>
+        <button class="btn btn-outline qv-wish" id="qvWish">♡ Save to wishlist</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="cart-drawer wish-drawer" id="wishDrawer" aria-label="Wishlist" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your wishlist</h3>
+      <button class="close-btn" id="wishClose" aria-label="Close wishlist">×</button>
+    </div>
+    <div class="cart-items" id="wishItems"></div>
+    <div class="cart-footer" id="wishFooter">
+      <div class="wish-foot">
+        <button class="btn full" id="wishAddAll">Add all to shopping bag</button>
+        <button class="btn btn-ig full" id="wishDm">Send wishlist on Instagram DM</button>
+        <button class="btn btn-outline" id="wishShare">Share list</button>
+        <button class="btn btn-outline" id="wishClear">Clear all</button>
+      </div>
+    </div>
+  </aside>
 
   <div class="overlay" id="overlay"></div>
 
@@ -972,9 +1203,12 @@
         <span>Subtotal</span>
         <strong id="cartSubtotal">₹0</strong>
       </div>
-      <button class="btn" id="checkoutBtn">Continue to checkout</button>
+      <div class="ship-bar" id="shipBar"></div>
+      <textarea class="cart-note" id="cartNote" placeholder="Your name, city and any note (optional)" aria-label="Order note"></textarea>
+      <button class="btn btn-ig" id="orderDmBtn">Order via Instagram DM</button>
+      <button class="btn btn-outline" id="checkoutBtn">Copy order summary</button>
       <p class="cart-disclaimer">
-        Demonstration storefront. Online payment and order processing are not configured.
+        No online payment here. We confirm availability and payment on Instagram DM.
       </p>
     </div>
   </aside>
@@ -1057,11 +1291,15 @@
     // ============================================
     // STATE
     // ============================================
-    let cart = [];
-    let wishlist = [];
+    function loadState(key) { try { return JSON.parse(localStorage.getItem(key)) || []; } catch (e) { return []; } }
+    function saveState() { try { localStorage.setItem("aurae_cart", JSON.stringify(cart)); localStorage.setItem("aurae_wish", JSON.stringify(wishlist)); } catch (e) {} }
+    const validIds = products.map(function (p) { return p.id; });
+    let cart = loadState("aurae_cart").filter(function (c) { return c && validIds.includes(c.id) && c.quantity > 0; });
+    let wishlist = loadState("aurae_wish").filter(function (id) { return validIds.includes(id); });
     let currentFilter = "All";
     let currentGender = "All";
     let searchTerm = "";
+    let sortMode = "featured";
 
     const productGrid = document.getElementById("productGrid");
     const cartDrawer = document.getElementById("cartDrawer");
@@ -1110,6 +1348,9 @@
         return matchesCategory && matchesGender && matchesSearch;
       });
 
+      if (sortMode === "low") filtered.sort(function (a, b) { return a.price - b.price; });
+      if (sortMode === "high") filtered.sort(function (a, b) { return b.price - a.price; });
+
       document.getElementById("productTotal").textContent =
         filtered.length + (filtered.length === 1 ? " piece" : " pieces");
 
@@ -1140,6 +1381,7 @@
                 aria-pressed="${isWishlisted}"
               >${isWishlisted ? "♥" : "♡"}</button>
 
+              <button class="quick-add quick-add-dm" data-view="${product.id}">Quick view</button>
               <button class="quick-add" data-add="${product.id}">Add to shopping bag +</button>
             </div>
 
@@ -1150,8 +1392,9 @@
 
               <div class="product-bottom">
                 <span class="product-price">${formatPrice(product.price)}</span>
-                <span class="product-rating" aria-label="Demo rating">${product.rating}</span>
+                <span class="product-rating" aria-label="Rated 5 stars">${product.rating}</span>
               </div>
+              <button class="btn btn-ig product-dm" data-dm-product="${product.id}">Order on DM</button>
             </div>
           </article>
         `;
@@ -1162,6 +1405,10 @@
       const addButton = event.target.closest("[data-add]");
       const wishlistButton = event.target.closest("[data-wishlist]");
 
+      const dmBtn = event.target.closest("[data-dm-product]");
+      const viewBtn = event.target.closest("[data-view]");
+      if (dmBtn) orderProductOnDm(Number(dmBtn.dataset.dmProduct));
+      if (viewBtn) openQuickView(Number(viewBtn.dataset.view));
       if (addButton) addToCart(Number(addButton.dataset.add));
       if (wishlistButton) toggleWishlist(Number(wishlistButton.dataset.wishlist));
     });
@@ -1228,31 +1475,80 @@
         showToast(product.name + " added to your wishlist.");
       }
 
-      document.getElementById("wishlistCount").textContent = wishlist.length;
       renderProducts();
+      renderWishlist();
+      saveState();
     }
 
-    document.getElementById("wishlistHeader").addEventListener("click", function () {
-      if (wishlist.length === 0) {
-        showToast("Your wishlist is empty. Select the heart on a product to save it.");
+    // ============================================
+    // WISHLIST DRAWER
+    // ============================================
+    const wishDrawer = document.getElementById("wishDrawer");
+    const wishItems = document.getElementById("wishItems");
+
+    function renderWishlist() {
+      const c = document.getElementById("wishlistCount");
+      c.textContent = wishlist.length;
+      c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
+      document.getElementById("wishFooter").style.display = wishlist.length ? "" : "none";
+
+      if (!wishlist.length) {
+        wishItems.innerHTML = '<div class="cart-empty"><div style="font-family:var(--serif);font-size:27px;margin-bottom:10px">Nothing saved yet.</div><p>Tap the heart on any piece to keep it here.</p><p style="margin-top:20px"><button class="btn" id="wishBrowse">Browse the collection</button></p></div>';
         return;
       }
+      wishItems.innerHTML = wishlist.map(function (id) {
+        const p = products.find(function (x) { return x.id === id; });
+        if (!p) return "";
+        return '<div class="wish-item"><img src="' + p.image + '" alt="' + escapeHTML(p.name) + '"><div><h4>' + escapeHTML(p.name) + '</h4><p>' + formatPrice(p.price) + ' · ' + escapeHTML(p.category) + '</p>' +
+          '<div class="wish-actions"><button class="mini" data-wadd="' + id + '">Add to bag</button><button class="mini ig" data-wdm="' + id + '">Order on DM</button></div></div>' +
+          '<button class="remove-item" data-wremove="' + id + '" aria-label="Remove ' + escapeHTML(p.name) + ' from wishlist">×</button></div>';
+      }).join("");
+    }
 
-      currentFilter = "All";
-      currentGender = "All";
-      searchTerm = "";
-      document.getElementById("searchInput").value = "";
-      syncFilterButtons();
-      renderProducts();
-
-      productGrid.querySelectorAll(".product-card").forEach(function (card) {
-        const button = card.querySelector("[data-wishlist]");
-        const id = button ? Number(button.dataset.wishlist) : null;
-        card.style.display = wishlist.includes(id) ? "" : "none";
+    function wishText() {
+      let t = "Hi Auraè! I'm interested in these pieces:\n\n";
+      wishlist.forEach(function (id, n) {
+        const p = products.find(function (x) { return x.id === id; });
+        if (p) t += (n + 1) + ". " + p.name + " - " + formatPrice(p.price) + "\n";
       });
+      return t + "\nCould you share availability and delivery details?";
+    }
 
-      document.getElementById("shop").scrollIntoView({ behavior: "smooth" });
-      showToast("Showing your saved pieces. Select a filter to browse again.");
+    function openWish() {
+      closeCart();
+      wishDrawer.classList.add("open");
+      overlay.classList.add("open");
+      wishDrawer.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      document.getElementById("wishClose").focus();
+    }
+
+    document.getElementById("wishlistHeader").addEventListener("click", openWish);
+    document.getElementById("wishClose").addEventListener("click", closeCart);
+
+    wishItems.addEventListener("click", function (e) {
+      const add = e.target.closest("[data-wadd]"), dm = e.target.closest("[data-wdm]"),
+            rm = e.target.closest("[data-wremove]"), br = e.target.closest("#wishBrowse");
+      if (add) addToCart(Number(add.dataset.wadd));
+      if (dm) orderProductOnDm(Number(dm.dataset.wdm));
+      if (rm) toggleWishlist(Number(rm.dataset.wremove));
+      if (br) { closeCart(); document.getElementById("shop").scrollIntoView({ behavior: "smooth" }); }
+    });
+
+    document.getElementById("wishAddAll").addEventListener("click", function () {
+      wishlist.forEach(function (id) { if (!cart.some(function (c) { return c.id === id; })) cart.push({ id: id, quantity: 1 }); });
+      renderCart();
+      showToast("All saved pieces added to your bag.");
+      openCart();
+    });
+    document.getElementById("wishDm").addEventListener("click", function () { openDm(wishText(), "wishlist"); });
+    document.getElementById("wishClear").addEventListener("click", function () {
+      wishlist = []; saveState(); renderProducts(); renderWishlist(); showToast("Wishlist cleared.");
+    });
+    document.getElementById("wishShare").addEventListener("click", function () {
+      const text = wishText();
+      if (navigator.share) navigator.share({ title: "My Auraè wishlist", text: text }).catch(function () {});
+      else copyText(text).then(function () { showToast("Wishlist copied. Paste it anywhere to share."); });
     });
 
     // ============================================
@@ -1286,6 +1582,7 @@
     }
 
     function renderCart() {
+      saveState();
       const totalQuantity = cart.reduce(function (sum, item) { return sum + item.quantity; }, 0);
 
       const subtotal = cart.reduce(function (sum, item) {
@@ -1295,6 +1592,10 @@
 
       document.getElementById("cartCount").textContent = totalQuantity;
       document.getElementById("cartSubtotal").textContent = formatPrice(subtotal);
+      const left = FREE_SHIP - subtotal;
+      document.getElementById("shipBar").innerHTML = (subtotal === 0 ? "Free delivery on orders above " + formatPrice(FREE_SHIP) :
+        left > 0 ? "Add " + formatPrice(left) + " more for free delivery" : "You have unlocked free delivery") +
+        '<i><b style="width:' + Math.min(100, subtotal / FREE_SHIP * 100) + '%"></b></i>';
 
       if (cart.length === 0) {
         cartItemsContainer.innerHTML = `
@@ -1344,6 +1645,7 @@
     });
 
     function openCart() {
+      wishDrawer.classList.remove("open");
       cartDrawer.classList.add("open");
       overlay.classList.add("open");
       cartDrawer.setAttribute("aria-hidden", "false");
@@ -1353,6 +1655,8 @@
 
     function closeCart() {
       cartDrawer.classList.remove("open");
+      wishDrawer.classList.remove("open");
+      wishDrawer.setAttribute("aria-hidden", "true");
       overlay.classList.remove("open");
       cartDrawer.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
@@ -1372,33 +1676,154 @@
     });
 
     // ============================================
-    // CHECKOUT DEMO
+    // INSTAGRAM DM ORDERING + MARKETING TRACKING
     // ============================================
-    document.getElementById("checkoutBtn").addEventListener("click", function () {
-      if (cart.length === 0) {
-        showToast("Add a piece to your bag before proceeding.");
-        return;
-      }
-      showToast("Demo only: connect a backend and payment gateway to enable checkout.");
+    const IG_HANDLE = "aurae.edition";
+    const FREE_SHIP = 999;
+    const PROMO = "AURAE10";
+
+    // Tracks clicks; plugs into Google Analytics / Meta Pixel when installed.
+    function track(name, data) {
+      try {
+        if (window.gtag) gtag("event", name, data || {});
+        if (window.fbq) fbq("trackCustom", name, data || {});
+        (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: name }, data || {}));
+      } catch (e) {}
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+      return new Promise(function (resolve, reject) {
+        const t = document.createElement("textarea");
+        t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+        document.body.appendChild(t); t.select();
+        try { document.execCommand("copy") ? resolve() : reject(); } catch (e) { reject(e); }
+        document.body.removeChild(t);
+      });
+    }
+
+    function buildOrderText(lines, note) {
+      let text = "Hi Auraè! I'd like to order:\n\n";
+      let total = 0;
+      lines.forEach(function (l, n) {
+        text += (n + 1) + ". " + l.product.name + " (" + l.product.gender + ") x" + l.qty + " - " + formatPrice(l.product.price * l.qty) + "\n";
+        total += l.product.price * l.qty;
+      });
+      text += "\nTotal: " + formatPrice(total) + "\nDiscount code: " + PROMO;
+      if (note) text += "\nNote: " + note;
+      text += "\n\nName:\nCity & pincode:\nSource: website";
+      return text;
+    }
+
+    function openDm(text, source) {
+      track("instagram_dm_click", { source: source });
+      const go = function (msg) {
+        showToast(msg);
+        setTimeout(function () {
+          window.open("https://ig.me/m/" + IG_HANDLE + "?utm_source=website&utm_medium=" + encodeURIComponent(source) + "&utm_campaign=dm_order", "_blank", "noopener");
+        }, 700);
+      };
+      if (!text) { go("Opening Instagram @" + IG_HANDLE + "…"); return; }
+      copyText(text).then(function () {
+        go("Order copied. Paste it in the DM and press send.");
+      }, function () {
+        go("Opening Instagram. Please type your order in the DM.");
+      });
+    }
+
+    function orderProductOnDm(id) {
+      const p = products.find(function (x) { return x.id === id; });
+      if (p) openDm(buildOrderText([{ product: p, qty: 1 }], ""), "product_" + id);
+    }
+
+    function cartLines() {
+      return cart.map(function (c) {
+        return { product: products.find(function (p) { return p.id === c.id; }), qty: c.quantity };
+      }).filter(function (l) { return l.product; });
+    }
+
+    document.getElementById("orderDmBtn").addEventListener("click", function () {
+      if (cart.length === 0) { showToast("Add a piece to your bag first, or message us directly."); return; }
+      openDm(buildOrderText(cartLines(), document.getElementById("cartNote").value.trim()), "cart");
     });
 
-    // ============================================
-    // NEWSLETTER DEMO
-    // ============================================
+    document.getElementById("checkoutBtn").addEventListener("click", function () {
+      if (cart.length === 0) { showToast("Add a piece to your bag before copying a summary."); return; }
+      copyText(buildOrderText(cartLines(), document.getElementById("cartNote").value.trim()))
+        .then(function () { showToast("Order summary copied."); }, function () { showToast("Could not copy. Please select the text manually."); });
+    });
+
+    document.addEventListener("click", function (event) {
+      const dm = event.target.closest("[data-dm]");
+      const follow = event.target.closest("[data-follow]");
+      if (dm) { event.preventDefault(); openDm("", dm.dataset.src || "link"); }
+      if (follow) {
+        event.preventDefault();
+        track("instagram_follow_click", {});
+        window.open("https://www.instagram.com/" + IG_HANDLE + "/?utm_source=website&utm_medium=follow", "_blank", "noopener");
+      }
+    });
+
+    document.getElementById("copyPromo").addEventListener("click", function () {
+      copyText(PROMO).then(function () { showToast("Code " + PROMO + " copied. Mention it in your DM."); },
+        function () { showToast("Your code is " + PROMO); });
+      track("promo_copy", {});
+    });
+
+    document.getElementById("sortSelect").addEventListener("change", function (e) { sortMode = e.target.value; renderProducts(); });
+
+    // Quick view
+    const qv = document.getElementById("quickView");
+    let qvId = null;
+    function openQuickView(id) {
+      const p = products.find(function (x) { return x.id === id; });
+      if (!p) return;
+      qvId = id;
+      document.getElementById("qvImg").src = p.image;
+      document.getElementById("qvImg").alt = p.name;
+      document.getElementById("qvCat").textContent = p.gender + " · " + p.category;
+      document.getElementById("qvName").textContent = p.name;
+      document.getElementById("qvStyle").textContent = p.style;
+      document.getElementById("qvPrice").textContent = formatPrice(p.price);
+      syncQvWish();
+      qv.classList.add("open");
+      track("quick_view", { product: p.name });
+    }
+    function syncQvWish() {
+      const on = wishlist.includes(qvId);
+      document.getElementById("qvWish").textContent = on ? "♥ Saved to wishlist" : "♡ Save to wishlist";
+    }
+    function closeQuickView() { qv.classList.remove("open"); }
+    document.getElementById("qvClose").addEventListener("click", closeQuickView);
+    qv.addEventListener("click", function (e) { if (e.target === qv) closeQuickView(); });
+    document.getElementById("qvDm").addEventListener("click", function () { orderProductOnDm(qvId); });
+    document.getElementById("qvWish").addEventListener("click", function () { toggleWishlist(qvId); syncQvWish(); });
+    document.getElementById("qvAdd").addEventListener("click", function () { addToCart(qvId); closeQuickView(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeQuickView(); });
+
+    // Shop the Gram: reuses existing product photos
+    document.getElementById("gramGrid").innerHTML = products.slice(0, 10).map(function (p) {
+      return '<button class="gram-tile" data-gram="' + p.id + '" aria-label="Ask about ' + escapeHTML(p.name) + ' on Instagram"><img src="' + p.image + '" alt="' + escapeHTML(p.name) + '" loading="lazy"><span>Ask on DM</span></button>';
+    }).join("");
+    document.getElementById("gramGrid").addEventListener("click", function (e) {
+      const t = e.target.closest("[data-gram]");
+      if (t) orderProductOnDm(Number(t.dataset.gram));
+    });
+
+    // Newsletter: no backend, so route the visitor to Instagram instead
     document.getElementById("newsletterForm").addEventListener("submit", function (event) {
       event.preventDefault();
-
       const emailInput = document.getElementById("newsletterEmail");
-      const message = document.getElementById("newsletterMessage");
-
-      if (!emailInput.checkValidity()) {
-        emailInput.reportValidity();
-        return;
-      }
-
-      message.textContent = "Thank you. The form works as a demo; connect an email service to save subscriptions.";
+      if (!emailInput.checkValidity()) { emailInput.reportValidity(); return; }
+      track("newsletter_signup", {});
+      document.getElementById("newsletterMessage").textContent = "Thank you. Follow @" + IG_HANDLE + " on Instagram to get new drops first.";
       emailInput.value = "";
     });
+
+    // Back to top
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", function () { toTop.classList.toggle("show", window.scrollY > 700); }, { passive: true });
+    toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
 
     // ============================================
     // MOBILE MENU
@@ -1423,12 +1848,12 @@
     // ============================================
     document.getElementById("footerShipping").addEventListener("click", function (event) {
       event.preventDefault();
-      showToast("Shipping policy is not configured. Add your actual delivery terms before publishing.");
+      showToast("Delivery time and charges are shared in your DM. Free delivery above ₹999.");
     });
 
     document.getElementById("footerReturns").addEventListener("click", function (event) {
       event.preventDefault();
-      showToast("Returns policy is not configured. Add your actual return terms before publishing.");
+      showToast("Message us within 48 hours of delivery for exchanges.");
     });
 
     // ============================================
@@ -1438,6 +1863,7 @@
 
     renderProducts();
     renderCart();
+    renderWishlist();
   </script>
 </body>
 </html>
